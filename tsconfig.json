@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "ES2020", // Use ES2020 or at least ES2017
+    "module": "commonjs",
+    "lib": ["ES2020", "DOM"], // Include Promise and DOM typings
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "dist",
+    "rootDir": "."
+  },
+  "include": ["tests/**/*.ts", "pages/**/*.ts", "config/**/*.ts"]
+}

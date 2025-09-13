@@ -1,0 +1,26 @@
+{
+  "name": "sauce-demo-playwright",
+  "version": "1.0.0",
+  "description": "Playwright automation project for SauceLab Demo",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:report": "playwright show-report",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write ."
+  },
+  "author": "Hardik Mangukiya",
+  "license": "MIT",
+  "devDependencies": {
+    "@eslint/js": "^9.35.0",
+    "@playwright/test": "^1.38.0",
+    "eslint": "^8.21.0",
+    "eslint-plugin-react": "^7.37.5",
+    "globals": "^16.4.0",
+    "jiti": "^2.5.1",
+    "prettier": "^3.0.0",
+    "typescript": "^5.2.0",
+    "typescript-eslint": "^8.43.0"
+  }
+}
