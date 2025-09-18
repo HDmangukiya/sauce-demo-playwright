@@ -1,13 +1,11 @@
-# Sauce Demo – Playwright Test Automation  
+# Sauce Demo – Playwright Test Automation
 
 This repository contains **end-to-end UI automation tests** for the [Sauce Demo](https://www.saucedemo.com/) application.  
-It is built using **[Playwright](https://playwright.dev/)** with **TypeScript** and follows **Page Object Model (POM)** for scalability and maintainability.  
+It is built using **[Playwright](https://playwright.dev/)** with **TypeScript** and follows **Page Object Model (POM)** for scalability and maintainability.
 
+## Steps
 
-
-## Steps  
-
-### 1. Clone the repo  
+### 1. Clone the repo
 
 ```bash
 git clone https://github.com/your-org/sauce-demo-playwright.git
@@ -15,27 +13,33 @@ cd sauce-demo-playwright
 ```
 
 ### 2. Install dependencies
+
 ```bash
 npm install
 ```
 
 ### 3. Install Playwright browsers
+
 ```bash
 npx playwright install
 ```
 
 # Running Tests
+
 ## Run all tests (default, headless mode)
+
 ```bash
 npm run test
 ```
 
 ## Run tests in headed mode (browser visible)
+
 ```bash
 npm run test:headed
 ```
 
 ## Run with a specific browser
+
 ```bash
 npx playwright test --project=chromium
 npx playwright test --project=firefox
@@ -43,11 +47,12 @@ npx playwright test --project=webkit
 ```
 
 ## Reports
+
 Generate && open HTML report
+
 ```bash
 npm run test:report
 ```
-
 
 If no report is found, make sure you’ve run tests with:
 
@@ -56,11 +61,12 @@ npx playwright test --reporter=html
 ```
 
 # Code Quality
+
 ## Run ESLint (check code quality)
+
 ```bash
 npm run lint
 ```
-
 
 Initialize ESLint config for the first time:
 
@@ -69,10 +75,10 @@ npm init @eslint/config
 ```
 
 ## Run Prettier (fomrat code)
+
 ```bash
 npm run format
 ```
-
 
 # Design Principles
 
@@ -108,12 +114,16 @@ API + UI hybrid tests for faster validation.
 Accessibility testing with axe-playwright.
 ```
 
-
 ## Extrabasic Commands
+
 ```bash
 Run npm init @eslint/config to generate .eslintrc.json.
 
 run tests in Chrome  ~  npx playwright test --project=chromium --headed
 
 screenshots/videos of failed tests location ~ Check the test-results/ folder.
+
+Remove generated and dependency folders
+Remove-Item -Recurse -Force dist, playwright-report, test-results, node_modules, package-lock.json
+
 ```
