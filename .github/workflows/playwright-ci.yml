@@ -9,9 +9,6 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        browser: [chromium, firefox, webkit]
 
     steps:
       # Checkout the repo
@@ -32,9 +29,9 @@ jobs:
       - name: Install Playwright browsers
         run: npx playwright install --with-deps
 
-      # Run Playwright tests for the current browser in the matrix
+      # Run Playwright tests (all projects from config)
       - name: Run Playwright tests
-        run: npx playwright test --browser ${{ matrix.browser }} --reporter=list
+        run: npx playwright test --reporter=list
 
       # Upload HTML report as artifact for review
       - name: Upload HTML Report
