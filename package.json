@@ -4,11 +4,13 @@
   "description": "Playwright automation project for SauceLab Demo",
   "main": "index.js",
   "scripts": {
+    "build": "tsc",
     "test": "playwright test",
     "test:headed": "playwright test --headed",
     "test:report": "playwright show-report",
     "lint": "eslint . --ext .ts",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "ci": "npm run format && npm run build && npm run test && npm run test:headed && npm run test:report"
   },
   "author": "Hardik Mangukiya",
   "license": "MIT",
